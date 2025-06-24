@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İlan Ver | İş Bulma</title>
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="ilanform-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container position-relative d-flex align-items-center justify-content-between">
+
+    <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+      <!-- <img src="assets/img/logo.webp" alt=""> -->
+      <h1 class="sitename">İŞ BULMA.</h1>
+    </a>
+    <nav id="navmenu" class="navmenu">
+  <ul>
+    <li><a href="index.html#hero" class="active">ANA SAYFA</a></li>
+    <li><a href="index.html#about">BİZİM HAKIMIZDA></a></li>
+    <!-- <li><a href="#services">SERVİSLER</a></li>-->
+    <li><a href="index.html#why-choose-us">NEDEN BİZİ SEÇMELİSİNİZ</a></li>
+    <!--<li><a href="#team">İŞ REHBERİ</a></li>-->
+    <li class="dropdown"><a href="service-details.html"><span>İŞ İLANLARİ</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+      <ul>
+        <li><a href="#">KÜRYE</a></li>
+        <li class="dropdown"><a href="#"><span>POZISIYON</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="#">SATİŞ PERSONELİ</a></li>
+            <li><a href="#">YÖNETMEN</a></li>
+            <li><a href="#">İŞ VE MESLEK DANIŞMANI</a></li>
+            <li><a href="#">LOJİSTİK UZMANİ</a></li>
+            <li><a href="#">ÖĞRETMEN</a></li>
+          </ul>
+        </li>
+        <li><a href="#">YAZILIM GELİŞTİRME UZMANI</a></li>
+        <li><a href="#">PROJE YÖNETİCİSİ</a></li>
+        <li><a href="#">DİJİTAL PAZARLAMA UZMANI</a></li>
+      </ul>
+    </li>
+    <li><a href="index.html#contact">ILETİŞİM BİLGİLERİ</a></li>
+    <li><a href="login.html">Giriş Yap</a></li>
+    <li><a href="register.html">Kayıt Ol</a></li>
+  </ul>
+  <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+</nav>
+
+    <!-- BURAYA NAVMENÜ GELECEK (YUKARIDAKİ KOD) -->
+
+    <a class="btn-getstarted" href="ilanform.html">ÜCRETSİZ İLAN VER</a>
+  </div>
+</header>
+
+
+
+  <section class="ilan-ver-section py-5">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <!-- Sol: Başlık ve görsel -->
+        <div class="col-md-5 mb-4 mb-md-0">
+          <h2 class="section-title">İlanını Kolayca Yayınla</h2>
+          <p class="text-muted">Şirketinizin ilanını birkaç adımda oluşturun, doğru adaylara ulaşın.</p>
+          <img src="assets/img/ilan-ver.png" alt="İlan Ver" class="img-fluid rounded shadow">
+        </div>
+
+        <!-- Sağ: Form Alanı -->
+        <div class="col-md-7">
+          <div class="card p-4 shadow-sm border-0">
+            <form action="submit-job.php" method="post" class="row g-3">
+              <div class="col-md-6">
+                <label for="fullname" class="form-label">İsim Soyisim</label>
+                <input type="text" class="form-control" id="fullname" name="fullname" required>
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label">E-Posta</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <div class="col-md-6">
+                <label for="phone" class="form-label">Telefon Numarası</label>
+                <input type="tel" class="form-control" id="phone" name="phone" required>
+              </div>
+              <div class="col-md-6">
+                <label for="password" class="form-label">Şifre</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+              </div>
+              <div class="col-12">
+                <label for="company" class="form-label">Şirket Adı</label>
+                <input type="text" class="form-control" id="company" name="company" required>
+              </div>
+              <div class="col-md-6">
+                <label for="il" class="form-label">İl</label>
+                <select class="form-select" id="il" name="il" required>
+                  <option value="">Seçiniz</option>
+                  <option>İstanbul</option>
+                  <option>Ankara</option>
+                  <option>İzmir</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="ilce" class="form-label">İlçe</label>
+                <input type="text" class="form-control" id="ilce" name="ilce" required>
+              </div>
+              <div class="col-md-6">
+                <label for="vergi-il" class="form-label">Vergi Dairesi İli</label>
+                <select class="form-select" id="vergi-il" name="vergi-il" required>
+                  <option value="">Seçiniz</option>
+                  <option>İstanbul</option>
+                  <option>Ankara</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="vergi-dairesi" class="form-label">Vergi Dairesi</label>
+                <input type="text" class="form-control" id="vergi-dairesi" name="vergi-dairesi" required>
+              </div>
+              <div class="col-12">
+                <label for="vergi-no" class="form-label">Vergi Numarası</label>
+                <input type="text" class="form-control" id="vergi-no" name="vergi-no" required>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="kvkk" required>
+                  <label class="form-check-label" for="kvkk">
+                    Verilerimin KVKK kapsamında işlenmesini kabul ediyorum.
+                  </label>
+                </div>
+              </div>
+              <div class="col-12 d-grid">
+                <button type="submit" class="btn btn-primary">İlanı Yayınla</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
